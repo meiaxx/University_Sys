@@ -1,0 +1,4 @@
+Flask
+flask-email
+re
+uuid
