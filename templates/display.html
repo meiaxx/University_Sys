@@ -1,0 +1,80 @@
+<html lang="es">
+	<head>
+		<title>Informacion</title>
+	</head>
+
+	<style type="text/css">
+		td,h2{
+			color: black;
+		}
+	</style>
+
+	<body bgcolor="#adbab1">
+		<div class="one">
+			<div class="two">
+				<h1>Ver Info</h1>
+				<ul>
+					<li><a href="{{url_for('cuenta')}}">Perfil</a></li>
+					<li class="active"><a href="{{url_for('mostrarinfo')}}">Ver Informacion</a></li>
+					<li><a href="{{url_for('actualizar')}}">Actualizar</a></li>
+					<li><a href="{{url_for('logout')}}">Salir</a></li>
+				</ul>
+			</div>
+			<div class="content" align="center">
+				<div class="topbar">
+					<h2>Informacion: </h2>					
+				</div> </br>
+				<div class="contentbar">
+					<h1 style="color: black;">Datos usuario {{ session.usuario }}</h1>
+					{% block content %}
+						<div class="border">
+							<table class="worddark"></br></br>
+								<tr>
+									<td>Nombre:</td>
+									<td>{{ users['nombre'] }}</td>
+								</tr>
+								<tr>
+									<td>Apellido:</td>
+									<td>{{ users['apellido'] }}</td>
+								</tr>
+								<tr>
+									<td>Edad:</td>
+									<td>{{ users['edad'] }}</td>
+								</tr>
+								<tr>
+									<td>Fecha/Nacimiento:</td>
+									<td>{{ users['fecnac'] }}</td>
+								</tr>
+								<tr>
+									<td>Correo/Electronico:</td>
+									<td>{{ users['email'] }}</td>
+								</tr>
+								<tr>
+									<td>Tip de Cargo:</td>
+									<td>{{ users['tipocargo'] }}</td>
+								</tr>
+
+								<tr>
+									<td>Direccion:</td>
+									<td>{{ users['direccion'] }}</td>
+								</tr>
+
+								<tr>
+									<td>Numero:</td>
+									<td>{{ users['numero'] }}</td>
+								</tr>
+
+								<tr>
+									<td>Usuario:</td>
+									<td>{{ users['usuario'] }}</td>
+								</tr>
+							</table>
+
+						</div>
+					{% endblock %}										
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

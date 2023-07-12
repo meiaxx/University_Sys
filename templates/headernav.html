@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Karla', sans-serif;
+ 
+ }
+
+ body{
+        background-image: url('/static/images/iii.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+    }
+ 
+ .containernav{
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   padding-top: 35px;
+   padding-left: 8%;
+   padding-right: 8%;
+ }
+ nav{
+   padding: 10px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ .logo a{
+   font-size: 40px;
+   text-decoration: none;
+ }
+ span{
+   color: #f9004d;
+ }
+ nav ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 10px 15px;
+ }
+ nav ul li a{
+   text-decoration: none;
+   transition: 0.5s;
+   font-size: 20px;
+ }
+ nav ul li a:hover{
+   color: #f9004d;
+ }
+ .login{
+   text-decoration: none;
+   margin-right: 15px;
+   font-size: 18px;
+ }
+  .content{
+   margin-top: 10%;
+   max-width: 600px;
+ }
+ .content h2{
+   font-size: 60px
+ }
+ .content p{
+   margin-top: 10px;
+   line-height: 25px;
+ }
+
+.link {
+   margin-top: 30px;
+ }
+ .hire{
+   color: #000;
+   text-decoration: none;
+   background: #fff;
+   padding: 9px 25px;
+   font-weight: bold;
+   border-radius: 6px;
+   transition: 0.5s;
+ }
+ .link .hire:hover{
+   background: transparent;
+   border: 1px solid #fff;
+   color: #fff;
+ }
+</style>
+
+  <div class="containernav">
+      <nav>
+        <div class="logo">
+          <a href="#">UPTT</a>
+        </div>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Inicio</a></li>
+          <li><a href="{{ url_for('requisitos') }}">Requisitos y Carreras</a></li>
+          <li><a href="{{ url_for('download') }}">Planillas UPTT</a></li>
+          <li><a href="{{ url_for('sedes') }}">Nucleos</a></li>
+          <li><a href="{{ url_for('galeria') }}">Galeria</a></li>
+          <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        </ul>
+        <div class="buttons">
+          <a  href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
+          <a  href="{{ url_for('registro') }}" class="btn btn-primary">Registro</a>
+        </div>
+      </nav>

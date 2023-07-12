@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Actualizar Datos</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Actualizar Datos Personales</h2>
+    <br>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h1 align="center">{{ message }}</h1>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <br>
+
+    <form method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Ingresa tu apellido">
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" class="form-control" id="edad" placeholder="Ingresa tu edad">
+      </div>
+      <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" name="fecha" class="form-control" id="fechaNacimiento">
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" name="correo" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Ingresa tu dirección">
+      </div>
+      <div class="form-group">
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" name="numero" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono">
+      </div>
+      <div class="form-group">
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Ingresa tu usuario">
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" name="contraseña" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña">
+      </div>
+      <div class="form-group">
+        <label for="cargo">Tipo de Cargo:</label>
+        <select name="tipocargo" class="form-control" id="cargo">
+          <option value="administrador">Administrador</option>
+          <option value="obrero">Obrero</option>
+          <option value="docente">Docente</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="imagen">Imagen de Perfil:</label>
+        <input name="imagen" type="file" class="form-control-file" id="imagen">
+      </div>
+      <button type="submit" class="btn btn-primary">Actualizar</button>
+      <a  href="{{ url_for('perfil') }}" type="button" class="btn btn-secondary">Cancelar</a>
+    </form>
+  </div>
+</body>
+</html>

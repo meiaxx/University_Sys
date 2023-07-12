@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    {% include 'headernav.html' %}
+    <br><br>
+
+    <div class="container">
+        <h1 class="text-center">Iniciar sesión</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <br>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h1 align="center">{{ message }}</h1>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <br>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Ingresa tu usuario" onKeyDown="if(this.value.length==8) return false;" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        <a href="{{ url_for('home') }}" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</a>
+                    </div>
+                    <div class="text-center mt-2">
+                        <a href="{{ url_for('olvidocontraseña') }}" class="btn btn-danger">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+</body>
+</html>

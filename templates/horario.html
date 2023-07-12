@@ -1,0 +1,85 @@
+  <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horario</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
+
+    <!-- CSS -->
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  
+  <style type="text/css">
+   /* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/static/images/iii.jpg);
+}
+
+td{
+  font-size: 50px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+<body>
+  <a href="{{ url_for('cuenta')}}">
+    <i class="fa fa-arrow-left"></i>
+    Volver   
+  </a>
+
+      {% block content %}          
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td>Fecha</td>
+                <td>Hora de Entrada</td>
+                <td>Hora de Salida</td>
+              </tr>
+              <tr>
+                <td>{{ timedate }}</td>
+                <td>{{ data['horaen'] }}</td>
+		<td>test</td>
+              </tr>
+            </tbody>
+          </table>
+
+      {% endblock %}                    
+      
+
+
+
+  </body>
+</html>

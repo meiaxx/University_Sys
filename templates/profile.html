@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Perfil</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .profile-username {
+      color: #888;
+      margin-top: 10px;
+    }
+    .profile-occupation {
+      margin-top: 10px;
+    }
+    .profile-buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="text-center">
+          <img src="uploads/{{ account[11] }}" class="profile-image" alt="Imagen de perfil">
+        </div>
+        <h2 class="profile-name text-center">{{ account[1] }}</h2>
+        <p class="profile-username text-center">{{ account[8] }}</p>
+        <p class="profile-occupation text-center">{{ account[10] }}</p>
+        <div class="text-center profile-buttons">
+          <a href="{{ url_for('actualizar_datos') }}" class="btn btn-primary">Actualizar Datos</a>
+          <a href="{{ url_for('cuenta') }}" class="btn btn-secondary">Regresar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

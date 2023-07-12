@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inicio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<style type="text/css">
+   @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+
+}
+
+.containernav{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/static/images/iii.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 35px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+nav{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a{
+  font-size: 40px;
+  text-decoration: none;
+}
+span{
+  color: #f9004d;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 15px;
+}
+nav ul li a{
+  text-decoration: none;
+  transition: 0.5s;
+}
+nav ul li a:hover{
+  color: #f9004d;
+}
+.login{
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+.btn{
+  background: #000;
+  border-radius: 6px;
+  padding: 9px 25px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+.content{
+  margin-top: 5%;
+  max-width: 600px;
+}
+.content h2{
+  font-size: 60px
+}
+.content p{
+  margin-top: 10px;
+  line-height: 25px;
+}
+a{
+  color: black;
+}
+.link {
+  margin-top: 30px;
+}
+.hire{
+  color: #000;
+  text-decoration: none;
+  background: #fff;
+  padding: 9px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.link .hire:hover{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+ 
+</style>
+
+<body>
+
+    {% include 'headernav.html' %}
+
+    </br>
+    <h1>CARRERAS A OFERTAR UPPT MARIO BRICEÑO IRAGORRY EXTENSION CARACHE</h1>
+
+    </br></br><br>
+    <h1>UNIVERSIDAD POLITÉCNICA TERRITORIAL DEL ESTADO TRUJILLO<br />        
+    &quot;MARIO BRICEÑO IRAGORRY&quot;<br />
+    EXTENSIÓN CARACHE</h1>
+
+    <br><br>
+
+    <div class="containernav">
+      <div class="container">
+        <h1 class="text-center">Requisitos de Inscripción para Nuevos Ingresos</h1>
+        <br><br>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item">Planilla de Inscripción</li>
+          <li class="list-group-item">Título de Bachiller Autenticado</li>
+          <li class="list-group-item">Notas de Bachiller Certificadas</li>
+          <li class="list-group-item">Copia de la Planilla de la OPSU</li>
+          <li class="list-group-item">Carta de Buena Conducta</li>
+          <li class="list-group-item">Original y copia de la Partida de Nacimiento</li>
+          <li class="list-group-item">Copias de Cédula centrada y ampliada a color</li>
+          <li class="list-group-item">Fotos tipo Carnet fondo Blanco</li>
+        </ol>
+      </div>
+    </div>
+
+</body>
+</html>
+

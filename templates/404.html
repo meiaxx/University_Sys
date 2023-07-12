@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 Not Found</title>
+
+<style type="text/css">
+	body
+	{
+		width: 100%;
+		height: 100vh;
+		background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('static/images/notf.jpeg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	.msg
+	{
+		text-align: center;
+		font-size: 60px;
+	}
+
+</style>
+
+</head>
+<body>
+	<div class="msg">
+		<a style="color: #fff;" href="{{ url_for('home') }}">Volver al Inicio</a>
+	</div>
+</body>
+</html>
